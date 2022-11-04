@@ -16,8 +16,7 @@ RUN echo "RUN_CMD: ${RUN_CMD}"
 WORKDIR /home/node/app
 COPY package*.json ./
 
-COPY src src
-COPY tsconfig.json .
+COPY . .
 
 RUN $INSTALL_CMD $INSTALL_CMD_DEV_FLAGS
 RUN $BUILD_CMD
